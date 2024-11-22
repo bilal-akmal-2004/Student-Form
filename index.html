@@ -3,11 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <title>Student Profile</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Assalam o Alikum</h1>
+    <h1 class="studentDataheading">Student Data !</h1>
+    <div class="mainLoginDiv">
+      <div class="loginDiv">
+        <form action="" onsubmit="checkOnSubmit(event)">
+          <input
+            type="text"
+            placeholder="Enter username"
+            id="username"
+            onInput="inValidUserName(event)"
+          />
+          <span></span>
+          <input
+            type="password"
+            placeholder="Enter password"
+            id="password"
+            onInput="inValidPassword(event)"
+          />
+          <span></span>
+          <input
+            type="email"
+            placeholder="Enter gmail"
+            id="email"
+            onInput="inValidEmail(event)"
+          />
+          <span></span>
+          <label for=""><input type="radio" name="gender" />Male</label>
+          <label for=""><input type="radio" name="gender" />Female</label>
+          <select>
+            <option value="">Select an option</option>
+            <option value="">Karachi</option>
+            <option value="">Lahore</option>
+            <option value="">Islamabad</option>
+          </select>
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+
+    <div class="mainDiv">
+      <div class="correctDiv">
+        <h1 id="studentNameDisplay"></h1>
+        <h1 id="passwordNameDisplay"></h1>
+        <h1 id="emailNameDisplay"></h1>
+      </div>
+      <div id="error"></div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
