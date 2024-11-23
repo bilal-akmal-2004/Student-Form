@@ -68,11 +68,13 @@ function checkOnSubmit(e) {
   } else {
     // console.log(selectButtonCities.value);
   }
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const email = document.getElementById("email").value;
-  const city = selectButtonCities.value;
-  const gender = document.querySelector('input[name="gender"]:checked');
+
+  // here is the code for the constructor
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  let email = document.getElementById("email").value;
+  let city = selectButtonCities.value;
+  let gender = document.querySelector('input[name="gender"]:checked');
 
   let emailExists = false;
   let usernameExists = false;
@@ -95,7 +97,7 @@ function checkOnSubmit(e) {
     alert("Username already exists!");
     return;
   }
-  const newUser = new User(username, password, email, gender.value, city);
+  let newUser = new User(username, password, email, gender.value, city);
   users.push(newUser);
 
   alert("User registered successfully!");
